@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :lists, except: [:update, :edit, :destroy] do
+  resources :lists, only: [:index, :new, :create, :show] do
     resources :bookmarks, only: [ :new, :create, :destroy ]
   end
 end

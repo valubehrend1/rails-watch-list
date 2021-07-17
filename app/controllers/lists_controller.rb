@@ -12,11 +12,12 @@ class ListsController < ApplicationController
         if @list.save
             redirect_to lists_path
         else
-           redirect_to new_list_path
+            render :new
         end
     end
 
     def show
+        @list = List.find(params[:id])
     end
 
     private

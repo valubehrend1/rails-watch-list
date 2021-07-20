@@ -18,12 +18,22 @@ class ListsController < ApplicationController
 
     def show
         @bookmark = Bookmark.new
-        @list = List.find(params[:id])
+        @list = list_find
         @bookmarks = Bookmark.where(list_id: @list.id)
+    end
+
+    def destroy
+        @list = list_find
+        @list.destroy
+        redirect_to lists_path
     end
 
     private
     def list_params
     params.require(:list).permit(:name)
+    end
+
+    def list_find
+        List.find(params[:id])
     end
 end

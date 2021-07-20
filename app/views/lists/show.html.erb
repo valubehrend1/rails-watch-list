@@ -1,11 +1,11 @@
-<h1><%= @list.name %></h1>
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-    <%= f.input :comment, required: true %>
-    <%= f.association :movie %>
-    <%= f.submit %>
-<% end %>
-
 <div class="container">
+    <h1><%= @list.name %></h1>
+    <%= simple_form_for [ @list, @bookmark ] do |f| %>
+        <%= f.input :comment, required: true %>
+        <%= f.association :movie %>
+        <%= f.submit %>
+    <% end %>
+
     <div class="card" style="width: 18rem;">
         <% @bookmarks.each do |bookmark| %>
             <%= image_tag(bookmark.movie.poster_url, :alt => "rss feed") %>

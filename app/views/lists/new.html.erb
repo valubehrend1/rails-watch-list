@@ -1,5 +1,13 @@
-<%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
-<% end %>
-<%= link_to "Go back", lists_path %>
+<h1>Create a new List</h1>
+
+<div class="container-create-list">
+    <div class="card" style="width: 65%;">
+        <div class="container mt-3">
+            <%= simple_form_for(@list) do |f| %>
+                <%= f.input :name, class:"create-new-list", placeholder: "Name" %>
+                <%= f.submit class: "second-btn" %>
+            <% end %>
+        </div>
+    </div>
+    <%= link_to "Go back", lists_path, class: "main-btn" %>
+</div>

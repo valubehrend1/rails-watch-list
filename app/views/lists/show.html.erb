@@ -1,2 +1,16 @@
 <h1><%= @list.name %></h1>
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
+    <%= f.input :comment, required: true %>
+    <%= f.association :movie %>
+    <%= f.submit %>
+<% end %>
+
+<% @bookmarks.each do |bookmark| %>
+    <%= bookmark.comment %>
+    <%= link_to "Delete",
+            list_path(bookmark),
+            method: :delete,
+            data: { confirm: "Are you sure?" }  %>
+<% end %>
+
 <%= link_to "Go back",  lists_path%>

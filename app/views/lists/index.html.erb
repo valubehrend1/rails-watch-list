@@ -1,7 +1,11 @@
+<%# Navbar %>
+<%= render "navbar", lists: @lists %>
+
+<%# Banner %>
+<%= render "banner", lists: @lists %>
+
 <ul>
     <% @lists.each do |list| %>
         <li><%= link_to list.name, list_path(list) %></li>
     <% end %>
 </ul>
-
-<%= link_to "Create a new List", new_list_path %>

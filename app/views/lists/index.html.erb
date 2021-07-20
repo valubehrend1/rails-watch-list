@@ -8,9 +8,10 @@
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1530925486883-d9da662d497c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=936&q=80)">
                     <%= link_to list.name, list_path(list) %>
                 </div>
-                <%= link_to 'delete', list_path(list), method: :delete, class:"second-btn", data: { confirm: "Are you sure you want to remove" } %>
+                <%= link_to 'delete', list_path(list), method: :delete, class:"second-btn margin-top-10", data: { confirm: "Are you sure you want to remove" } %>
             </div>
         </div>
     <% end %>
 </div>
+
 

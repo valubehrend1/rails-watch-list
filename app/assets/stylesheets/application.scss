@@ -8,15 +8,27 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+/*
+ *= require sweetalert2
+ */
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import "lists";
+@import "bookmarks";
 
+.margin-20 {
+    margin: 20px 0px 20px 0px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
 
 
 .main-btn {
+
     margin-top: 20px;
     background-color: $btn-color;
     border: 1px solid $btn-color;
@@ -32,7 +44,7 @@
 }
 
 .second-btn {
-    margin-top: 10px;
+
     background-color: black;
     border: 1px solid black;
     border-radius: $border-btn;

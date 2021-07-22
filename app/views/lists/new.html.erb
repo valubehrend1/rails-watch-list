@@ -4,6 +4,7 @@
         <div class="container mt-3">
             <%= simple_form_for(@list) do |f| %>
                 <%= f.input :name, class:"create-new-list", placeholder: "Name" %>
+                <%= f.input :photo, as: :file %>
                 <%= f.submit class: "second-btn" %>
             <% end %>
         </div>

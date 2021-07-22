@@ -5,7 +5,7 @@
     <% @lists.each do |list| %>
         <div class="card" style="width: 18rem;">
             <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
-            <%= cl_image_tag list.photo.key %>
+            <%= cl_image_tag list.photo.key, crop: :fill%>
             <%= link_to 'delete', list_path(list), method: :delete, class:"second-btn margin-top-10", data: { confirm: "Are you sure you want to remove" } %>
         </div>
     <% end %>
